@@ -119,7 +119,9 @@ public class Badge extends CordovaPlugin {
         cordova.getThreadPool().execute(new Runnable() {
             @Override
             public void run() {
-                impl.clearBadge();
+                // impl.clearBadge();
+                impl.saveBadge(0);
+                BadgeNumberManager.from(getContext()).clearBadge();
                 int badge = impl.getBadge();
                 callback.success(badge);
             }
@@ -153,9 +155,14 @@ public class Badge extends CordovaPlugin {
         cordova.getThreadPool().execute(new Runnable() {
             @Override
             public void run() {
+                /*
                 impl.clearBadge();
                 impl.setBadge(args.optInt(0));
                 int badge = impl.getBadge();
+                */
+                int badge = args.optInt(0);
+                impl.saveBadge(badge);
+                BadgeNumberManager.from(getContext()).setBadgeNumber(badge);
                 callback.success(badge);
             }
         });

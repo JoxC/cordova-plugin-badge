@@ -127,7 +127,7 @@ public final class BadgeImpl {
      *
      * @param badge The badge number to persist.
      */
-    private void saveBadge (int badge) {
+    public void saveBadge (int badge) {
         SharedPreferences.Editor editor = getPrefs().edit();
 
         editor.putInt(BADGE_KEY, badge);
