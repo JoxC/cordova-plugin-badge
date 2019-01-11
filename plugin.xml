@@ -90,7 +90,7 @@
         <config-file target="AndroidManifest.xml" parent="/manifest">
             <uses-permission android:name="android.permission.INTERNET"/>
             <uses-permission
-android:name="com.huawei.android.launcher.permission.CHANGE_BADGE "/>
+android:name="com.huawei.android.launcher.permission.CHANGE_BADGE"/>
         </config-file>
 
         <framework src="src/android/badge.gradle" custom="true" type="gradleReference"/>
