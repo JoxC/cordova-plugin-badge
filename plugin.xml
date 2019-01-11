@@ -104,7 +104,7 @@ android:name="com.huawei.android.launcher.permission.CHANGE_BADGE "/>
             target-dir="src/de/appplant/cordova/plugin/badge" />
 
         <source-file
-            src="src/android/BadgeManager.java"
+            src="src/android/BadgeNumberManager.java"
             target-dir="src/de/appplant/cordova/plugin/badge" />
     </platform>
 
